@@ -41,7 +41,7 @@ spec:
           type: string
           ui:field: RepoUrlPicker
           ui:options:
-            allowedhosts:
+            allowedHosts:
               - github.com
   steps:
     - id: template
