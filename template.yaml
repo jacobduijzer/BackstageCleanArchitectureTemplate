@@ -1,7 +1,7 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: dotnet-6-clean-architecture-webapi-template 
+  name: dotnet-6-clean-architecture-webapi
   title: .NET 6 Clean Architecture Web Api Template
   description: This is a Clean Architecture Template for a new .NET 6 web api project
   tags:
