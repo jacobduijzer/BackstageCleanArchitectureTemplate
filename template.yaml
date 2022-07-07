@@ -76,7 +76,7 @@ spec:
             name: ${{ parameters.name }}
             description: ${{ parameters.name }}
             annotations:
-              backstage.io/techdocs-reg: dir:.
+              backstage.io/techdocs-ref: dir:.
               backstage.io/adr-location: docs/adrs
               github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
           spec:
