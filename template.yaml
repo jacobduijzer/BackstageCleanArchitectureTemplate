@@ -5,7 +5,7 @@ metadata:
   title: .NET 6 Clean Architecture Web Api Template
   description: This is a Clean Architecture Template for a new .NET 6 web api project
   tags:
-    - .net6
+    - net6
     - dotnet6
     - dotnet
     - webapi
