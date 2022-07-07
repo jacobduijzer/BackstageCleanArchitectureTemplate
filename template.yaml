@@ -60,30 +60,8 @@ spec:
           name: ${{ parameters.name }}
           namespace: ${{ parameters.namespace }}
           owner: ${{ parameters.owner }}
-          destination: ${{ parseRepoUrl parameters.repoUrl }}
-
-          
-    - id: catalog-write
-      name: Write Catalog
-      action: catalog:write
-      input:
-        values:
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
-        entity:
-          apiVersion: backstage.io/v1alpha1
-          kind: Component
-          metadata:
-            name: ${{ parameters.name }}
-            description: ${{ parameters.name }}
-            annotations:
-              backstage.io/techdocs-ref: dir:.
-              backstage.io/adr-location: docs/adrs
-              github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
-          spec:
-            type: service
-            owner: ${{ parameters.owner | dump }}
-            lifecycle: experimental
-          
+
     - id: publish
       name: Publish
       action: publish:github

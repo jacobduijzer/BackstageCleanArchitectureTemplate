@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.name | dump }}
+  description: Some description for project ${{ values.name | dump }} could come here.
+  annotations:
+    backstage.io/techdocs-reg: dir:.
+    backstage.io/adr-location: docs/adrs
+    github.com/project-slug: ${{ values.destination.owner + "/" + values.destination.repo }}
+spec:
+  type: service
+  lifecycle: experimental
+  owner: ${{ values.owner | dump }}
