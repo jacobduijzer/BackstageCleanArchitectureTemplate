@@ -81,7 +81,7 @@ spec:
               github.com/project-slug: ${{values.destination.owner + "/" + values.destination.repo}}
           spec:
             type: service
-            owner: ${{ values.owner | dump }}
+            owner: ${{ parameters.owner | dump }}
             lifecycle: experimental
           
     - id: publish
