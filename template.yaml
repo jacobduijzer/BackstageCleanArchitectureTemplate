@@ -18,12 +18,17 @@ spec:
     - title: Provide component information
       required:
         - name
+        - namespace
         - owner
       properties:
         name:
           title: Name
           type: string
           description: Unique name of the component
+        namespace:
+          title: Namespace
+          type: string
+          description: The main namespace of the project
         owner:
           title: Owner
           type: string
@@ -53,6 +58,7 @@ spec:
           - .github/workflows/*
         values:
           name: ${{ parameters.name }}
+          namespace: ${{ parameters.namespace }}
           owner: ${{ parameters.owner }}
           destination: ${{ parseRepoUrl parameters.repoUrl }}
           
