@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: ${{ values.name | dump }}
-  description: ${{ values.description | dump }}
+  description: Some description for project ${{ values.name | dump }} could come here.
   annotations:
     backstage.io/techdocs-reg: dir:.
 spec:
